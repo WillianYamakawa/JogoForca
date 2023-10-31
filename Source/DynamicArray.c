@@ -2,6 +2,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "string.h"
+#include "stdint.h"
 
 void initDynamicArray(DynamicArray* arr, int elementSize, int capacity){
     arr->buffer = malloc(elementSize * capacity);
@@ -27,7 +28,7 @@ void addToDynamicArray(DynamicArray* arr, void* element){
         free(arr->buffer);
         arr->buffer = temp;
     }
-    memcpy((char*)arr->buffer + arr->size++ * arr->elementSize, element, arr->elementSize);
+    memcpy((uint8_t*)arr->buffer + arr->size++ * arr->elementSize, element, arr->elementSize);
 }
 
 void getDynamicArray(DynamicArray* arr, int idx, void* element){
@@ -35,7 +36,7 @@ void getDynamicArray(DynamicArray* arr, int idx, void* element){
         printf("Dynamic array overflow\n");
         exit(1);
     }
-    memcpy(element, (char*)arr->buffer + idx * arr->elementSize, arr->elementSize);
+    memcpy(element, (uint8_t*)arr->buffer + idx * arr->elementSize, arr->elementSize);
 }
 
 void clearDynamicArray(DynamicArray* arr){

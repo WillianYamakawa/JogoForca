@@ -1,3 +1,6 @@
+#ifndef _DNARR
+#define _DNARR
+
 typedef struct _dynamicArray{
     void* buffer;
     int size;
@@ -11,3 +14,5 @@ void addToDynamicArray(DynamicArray* arr, void* element);
 void getDynamicArray(DynamicArray* arr, int idx, void* element);
 void clearDynamicArray(DynamicArray* arr);
 void copyDynamicArray(DynamicArray* dest, DynamicArray* source);
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef _GMSTT
+#define _GMSTT
+
 typedef struct _gameState{
     char   *term;            // Palavra do jogo
     int     termLength;      // Tamanho da palavra do jogo
@@ -10,3 +13,5 @@ typedef struct _gameState{
 GameState* initGameState(const char* term);
 void restartGame(GameState* state, const char* term);
 void destroyGameState(GameState* state);
+
+#endif

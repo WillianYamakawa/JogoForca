@@ -1,3 +1,6 @@
+#ifndef _JFUTILS
+#define _JFUTILS
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,3 +15,5 @@ void getString(char* buffer, int maxLength);
 char getChar();
 char toUpperCase(char c);
 void formatTerm(char* str);
+
+#endif

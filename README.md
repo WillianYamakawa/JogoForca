@@ -1,0 +1,3 @@
+# JogoForca
+
+Academic purposes
